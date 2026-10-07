@@ -1,0 +1,13 @@
+{
+  "name": "BaanRight — Thai Housing Translator",
+  "short_name": "BaanRight",
+  "description": "Translate Thai rental listings into English and extract rent, deposit, phone, location and distance from MFU — on any device.",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#04342c",
+  "theme_color": "#04342c",
+  "icons": [
+    { "src": "icons/icon192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icons/icon512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}

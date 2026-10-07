@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>BaanRight — Thai Housing Translator for Rentals near MFU</title>
+<meta name="description" content="Free Thai→English rental listing translator. Paste a Facebook housing post and get the price, deposit, phone number, location and distance from MFU in seconds — plus photo saving, shortlists, CSV export and a Thai reply generator. Works on any device." />
+<meta name="theme-color" content="#04342c" />
+<meta property="og:title" content="BaanRight — Thai Housing Translator" />
+<meta property="og:description" content="Thai rental posts → English, with price, deposit, phone and MFU distance pulled out automatically. Free, no install." />
+<meta property="og:type" content="website" />
+<link rel="manifest" href="manifest.json" />
+<link rel="apple-touch-icon" href="icons/icon180.png" />
+<link rel="icon" href="icons/icon32.png" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<a class="skip-link" href="#app">Skip to the translator</a>
+
+<!-- ================= Header ================= -->
+<header class="site-header" id="siteHeader">
+  <div class="wrap header-inner">
+    <a class="brand" href="#top" aria-label="BaanRight home">
+      <span class="brand-mark">&#3610;</span>
+      <span class="brand-text">
+        <span class="brand-name">BaanRight</span>
+        <span class="brand-sub">Thai housing &rarr; English</span>
+      </span>
+    </a>
+
+    <nav class="site-nav" id="siteNav" aria-label="Main">
+      <a href="#how">How it works</a>
+      <a href="#app">Translator</a>
+      <a href="#features">Features</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+
+    <div class="header-actions">
+      <button id="themeToggle" class="icon-btn" title="Toggle dark mode" aria-label="Toggle dark mode">&#127769;</button>
+      <button id="installBtn" class="btn btn-sm btn-grad hidden">Install app</button>
+      <a class="btn btn-sm btn-grad header-cta" href="#app">Try it free</a>
+      <button id="navToggle" class="icon-btn nav-toggle" aria-label="Open menu" aria-expanded="false">&#9776;</button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+  <!-- ================= Hero ================= -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <span class="pill">&#127968; Built for MFU students &amp; international renters</span>
+        <h1>Thai rental posts,<br /><span class="grad-text">decoded into English</span> in one click.</h1>
+        <p class="lede">Paste any Facebook housing listing &mdash; BaanRight translates it and pulls out the <strong>rent, deposit, phone number, location and distance from MFU</strong> so you never sign for the wrong room.</p>
+
+        <div class="hero-cta">
+          <a class="btn btn-grad btn-lg" href="#app">Translate a listing</a>
+          <button class="btn btn-ghost btn-lg" id="demoBtn">&#9654; Load a demo post</button>
+        </div>
+
+        <ul class="hero-points">
+          <li>&#10003; Free forever</li>
+          <li>&#10003; No sign-up</li>
+          <li>&#10003; Phone, tablet &amp; desktop</li>
+        </ul>
+      </div>
+
+      <div class="hero-art" aria-hidden="true">
+        <div class="mock-card">
+          <div class="mock-label mock-label-th">Thai post</div>
+          <p class="mock-th">ห้องให้เช่า ซอยแม่จันใต้ 3 ใกล้มหาวิทยาลัยแม่ฟ้าหลวง<br />ค่าเช่า 6000 บาท/เดือน ประกัน 1 เดือน<br />ห่างจากมหาวิทยาลัย 10 นาที โทร 081-234-5678</p>
+          <div class="mock-arrow"><span>&#8595;</span> auto translate &amp; extract <span>&#8595;</span></div>
+          <div class="mock-label mock-label-en">BaanRight</div>
+          <div class="mock-en">
+            <div class="mock-chips">
+              <span class="mock-chip">&#3647;6,000/mo</span>
+              <span class="mock-chip chip-soft">Deposit 1 mo</span>
+              <span class="mock-chip chip-soft">Ready now</span>
+            </div>
+            <p class="mock-en-text">Room for rent, Soi Mae Chan Tai 3, near Mae Fah Luang University. 10 minutes from campus.</p>
+          </div>
+        </div>
+        <div class="float-chip chip-a">&#128205; 10 min from MFU</div>
+        <div class="float-chip chip-b">&#9742; 081-234-5678</div>
+        <div class="float-chip chip-c">&#11088; Shortlisted</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= How it works ================= -->
+  <section id="how" class="section">
+    <div class="wrap">
+      <p class="sec-kicker">How it works</p>
+      <h2 class="sec-title">Three steps to a listing you actually understand</h2>
+      <div class="steps-grid">
+        <article class="step-card reveal">
+          <span class="step-n">1</span>
+          <h3>Paste the Thai post</h3>
+          <p>Copy the listing text from Facebook, Kaidee or any group and drop it in. Add the post link if you want to jump back to it later.</p>
+        </article>
+        <article class="step-card reveal">
+          <span class="step-n">2</span>
+          <h3>Hit <em>Translate &amp; extract</em></h3>
+          <p>Long posts are chunked and translated automatically. Rent, deposit, phone, area, availability and distance from MFU are pulled out for you.</p>
+        </article>
+        <article class="step-card reveal">
+          <span class="step-n">3</span>
+          <h3>Save, shortlist &amp; compare</h3>
+          <p>Keep photos with each listing, star your favourites, search your saved list, export to CSV and send the landlord a Thai reply &mdash; all in one place.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= App ================= -->
+  <section id="app" class="section section-app">
+    <div class="wrap">
+      <p class="sec-kicker">The translator</p>
+      <h2 class="sec-title">Everything from the extension, in your browser</h2>
+
+      <div class="app-shell">
+        <nav class="tabs" role="tablist" aria-label="BaanRight sections">
+          <button class="tab active" data-tab="translate" role="tab" aria-selected="true">
+            <span class="tab-ico">&#127760;</span>Translate
+          </button>
+          <button class="tab" data-tab="saved" role="tab" aria-selected="false">
+            <span class="tab-ico">&#128278;</span>Saved
+            <span id="savedCount" class="tab-badge hidden">0</span>
+          </button>
+          <button class="tab" data-tab="alerts" role="tab" aria-selected="false">
+            <span class="tab-ico">&#128276;</span>Alerts
+          </button>
+        </nav>
+
+        <div class="panels">
+          <!-- ---------- Translate panel ---------- -->
+          <section id="panel-translate" class="panel">
+            <div class="panel-cols">
+              <div class="col-left">
+                <div class="card">
+                  <div class="card-head">
+                    <h3>Paste the Thai listing</h3>
+                    <span class="kbd-hint"><kbd>Ctrl</kbd>+<kbd>Enter</kbd> to run</span>
+                  </div>
+
+                  <div class="input-modes" role="group" aria-label="Input mode">
+                    <button class="mode-btn active" data-mode="text">&#128221; Paste text</button>
+                    <button class="mode-btn" data-mode="image">&#128247; Screenshot</button>
+                  </div>
+
+                  <textarea id="thaiText" placeholder="&#3623;&#3634;&#3591; &#3592;&#3629;&#3610; 1 &#3611;&#3619;&#3632;&#3605;&#3641; &#3648;&#3604;&#3639;&#3629;&#3609;&#3621;&#3632; 6000 &#3610;&#3634;&#3607;..." rows="8" spellcheck="false"></textarea>
+
+                  <div id="imageDrop" class="dropzone hidden">
+                    <input type="file" id="imageInput" accept="image/*" />
+                    <p class="hint">Screenshot OCR isn't in this build &mdash; paste the post's text instead for now.</p>
+                    <img id="imagePreview" class="hidden" alt="Screenshot preview" />
+                  </div>
+
+                  <label class="field-label" for="sourceLinkInput">Source link (optional)</label>
+                  <input type="url" id="sourceLinkInput" placeholder="Paste the Facebook post URL to revisit it later" />
+
+                  <div class="run-row">
+                    <button id="runBtn" class="primary-btn">Translate &amp; extract</button>
+                    <button id="clearTextBtn" class="mini-btn" title="Clear the text box">Clear</button>
+                  </div>
+                  <p id="runStatus" class="status"></p>
+                </div>
+
+                <div class="card">
+                  <div class="card-head">
+                    <h3>Photos for this listing</h3>
+                    <div class="head-actions">
+                      <button id="addPhotoBtn" class="mini-btn" title="Add photos from your computer">+ Add</button>
+                      <button id="clearTrayBtn" class="mini-btn ghost" title="Remove all photos">Clear</button>
+                    </div>
+                  </div>
+                  <p class="hint">Choose files, drag &amp; drop, or paste a screenshot with <kbd>Ctrl</kbd>/<kbd>Cmd</kbd>+<kbd>V</kbd>. Tick the photos to attach them when you save.</p>
+                  <input type="file" id="photoInput" accept="image/*" multiple hidden />
+                  <label class="dropzone dropzone-photos" id="photoDrop" for="photoInput">
+                    <span class="dz-emoji">&#128247;</span>
+                    <strong class="dz-title">Add photos</strong>
+                    <span class="dz-sub">drop files here &middot; or paste from clipboard</span>
+                  </label>
+                  <div id="photoTray" class="photo-tray"><span class="tray-empty">No photos yet</span></div>
+                  <p id="trayCount" class="hint tray-count"></p>
+                </div>
+              </div>
+
+              <div class="col-right">
+                <div id="skeleton" class="skeleton hidden" aria-hidden="true">
+                  <div class="sk-line w60"></div>
+                  <div class="sk-line"></div>
+                  <div class="sk-line w80"></div>
+                  <div class="sk-grid">
+                    <div class="sk-block"></div>
+                    <div class="sk-block"></div>
+                    <div class="sk-block"></div>
+                    <div class="sk-block"></div>
+                  </div>
+                </div>
+
+                <div id="resultEmpty" class="card card-muted">
+                  <div class="empty-emoji">&#129300;</div>
+                  <p class="empty-title">Your translation appears here</p>
+                  <p class="hint">Paste a Thai rental post and press <strong>Translate &amp; extract</strong> &mdash; or load the demo to see it in action.</p>
+                </div>
+
+                <div id="result" class="result hidden">
+                  <div class="result-head">
+                    <span id="priceHero" class="price-hero hidden"></span>
+                  </div>
+
+                  <div class="result-block">
+                    <div class="block-head">
+                      <h3>&#128172; Translation</h3>
+                      <button id="copyTransBtn" class="mini-btn" title="Copy English translation">Copy</button>
+                    </div>
+                    <div class="translation-box"><p id="translatedText"></p></div>
+                  </div>
+
+                  <div class="result-block">
+                    <h3>&#128202; Details</h3>
+                    <dl id="detailsList" class="details-grid"></dl>
+                  </div>
+
+                  <div class="result-block">
+                    <h3>&#128205; Distance</h3>
+                    <p id="distanceText" class="distance-text"></p>
+                  </div>
+
+                  <div class="action-row">
+                    <button id="saveListingBtn" class="primary-btn">&#128278; Save listing</button>
+                    <button id="toggleReplyBtn" class="secondary-btn">&#128172; Ask landlord</button>
+                  </div>
+                  <div class="action-row action-row-sub">
+                    <button id="copySummaryBtn" class="chip-btn">&#128203; Copy summary</button>
+                    <button id="shareBtn" class="chip-btn">&#128257; Share</button>
+                    <a id="sourceLinkBtn" class="chip-btn chip-link hidden" href="#" target="_blank" rel="noopener">&#128279; Original post</a>
+                  </div>
+                  <p id="saveStatus" class="status"></p>
+
+                  <div id="replyPanel" class="reply-panel hidden">
+                    <p class="hint">Pick what you want to ask &mdash; we'll translate it to Thai for you.</p>
+                    <div id="replyOptions" class="reply-options"></div>
+                    <button id="generateReplyBtn" class="primary-btn">Generate Thai message</button>
+                    <textarea id="replyOutput" class="hidden" rows="4" readonly></textarea>
+                    <button id="copyReplyBtn" class="chip-btn hidden">Copy message</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- ---------- Saved panel ---------- -->
+          <section id="panel-saved" class="panel hidden">
+            <div class="toolbar">
+              <input id="savedSearch" type="search" placeholder="Search price, area, phone&hellip;" aria-label="Search saved listings" />
+              <label class="toggle-chip" title="Show shortlisted only">
+                <input type="checkbox" id="shortlistOnly" />
+                <span>&#9733; Shortlist</span>
+              </label>
+              <button id="exportBtn" class="mini-btn" title="Export saved listings as CSV">&#11015; Export CSV</button>
+            </div>
+            <p id="savedStats" class="hint saved-stats"></p>
+
+            <div id="savedEmpty" class="empty-state">
+              <div class="empty-emoji">&#127968;</div>
+              <p class="empty-title">No saved listings yet</p>
+              <p class="hint">Translate a post and tap &ldquo;Save listing&rdquo; &mdash; price, distance and photos come with it.</p>
+            </div>
+            <ul id="savedList" class="saved-list"></ul>
+            <p id="noMatches" class="empty-state hidden">
+              <span class="empty-emoji">&#128269;</span><br />
+              Nothing matches that search.
+            </p>
+          </section>
+
+          <!-- ---------- Alerts panel ---------- -->
+          <section id="panel-alerts" class="panel hidden">
+            <div class="card">
+              <div class="card-head"><h3>My preferences</h3></div>
+              <p class="hint">Set a rough budget and area so you can compare listings faster.</p>
+              <div class="alert-form">
+                <input id="alertArea" type="text" placeholder="Preferred area, e.g. Fah Thai market" />
+                <input id="alertPrice" type="number" placeholder="Max price (THB/month)" inputmode="numeric" />
+                <button id="addAlertBtn" class="primary-btn">+ Add preference</button>
+              </div>
+            </div>
+            <ul id="alertsListUI" class="saved-list"></ul>
+            <div id="alertsEmpty" class="empty-state">
+              <div class="empty-emoji">&#128276;</div>
+              <p class="hint">No preferences yet &mdash; add your budget above.</p>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= Features ================= -->
+  <section id="features" class="section">
+    <div class="wrap">
+      <p class="sec-kicker">Everything included</p>
+      <h2 class="sec-title">The whole extension, plus a few web-only tricks</h2>
+      <div class="feature-grid">
+        <article class="feature-card reveal"><span class="f-ico">&#129534;</span><h3>Price &amp; deposit extraction</h3><p>Rent, deposit in months or baht, and availability are lifted straight out of the Thai text &mdash; no misreading 6,000 for 60,000.</p></article>
+        <article class="feature-card reveal"><span class="f-ico">&#9742;&#65039;</span><h3>Phone numbers &amp; location</h3><p>Contact numbers are cleaned and deduped, and the soi/landmark is pulled out without the trailing &ldquo;โทร 08…&rdquo;.</p></article>
+        <article class="feature-card reveal"><span class="f-ico">&#128205;</span><h3>Distance from MFU</h3><p>Minutes from campus, kilometres, Google Maps links and known landmarks like Fah Thai market are detected automatically.</p></article>
+        <article class="feature-card reveal"><span class="f-ico">&#128247;</span><h3>Photos with every listing</h3><p>Drag, drop or paste screenshots into the tray, tick the ones you want, and keep them beside the translation.</p></article>
+        <article class="feature-card reveal"><span class="f-ico">&#11088;</span><h3>Shortlist, search &amp; stats</h3><p>Star the best rooms, search your saved list by price or area, and see your average budget at a glance.</p></article>
+        <article class="feature-card reveal"><span class="f-ico">&#11015;&#65039;</span><h3>CSV export &amp; downloads</h3><p>Take your whole shortlist into a spreadsheet, or download the listing photos &mdash; one click, no account.</p></article>
+        <article class="feature-card reveal"><span class="f-ico">&#128172;</span><h3>Thai reply generator</h3><p>Tick the questions you want answered and get a polite Thai message ready to paste back to the landlord.</p></article>
+        <article class="feature-card reveal"><span class="f-ico">&#127769;</span><h3>Dark mode &amp; drafts</h3><p>Theme, in-progress text, source link and last result are saved automatically &mdash; close the tab and carry on later.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= Comparison ================= -->
+  <section class="section section-band">
+    <div class="wrap wrap-narrow">
+      <p class="sec-kicker">Web vs extension</p>
+      <h2 class="sec-title">Which BaanRight is right for you?</h2>
+      <div class="table-scroll">
+        <table class="compare">
+          <thead>
+            <tr><th scope="col">Feature</th><th scope="col">This website</th><th scope="col">Chrome extension</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Paste &amp; translate a listing</td><td class="yes">&#10003;</td><td class="yes">&#10003;</td></tr>
+            <tr><td>Price, deposit, phone, location, distance</td><td class="yes">&#10003;</td><td class="yes">&#10003;</td></tr>
+            <tr><td>Save listings with photos, star &amp; search</td><td class="yes">&#10003;</td><td class="yes">&#10003;</td></tr>
+            <tr><td>CSV export &amp; photo download</td><td class="yes">&#10003;</td><td class="yes">&#10003;</td></tr>
+            <tr><td>Thai reply generator &amp; search alerts</td><td class="yes">&#10003;</td><td class="yes">&#10003;</td></tr>
+            <tr><td>Dark mode, drafts, keyboard shortcut</td><td class="yes">&#10003;</td><td class="yes">&#10003;</td></tr>
+            <tr><td>Works on iPhone, Safari, Firefox…</td><td class="yes">&#10003;</td><td class="no">&mdash;</td></tr>
+            <tr><td>Right-click &rarr; save image to BaanRight</td><td class="no">&mdash;</td><td class="yes">&#10003;</td></tr>
+            <tr><td>Translate selected text on any page (FR-5)</td><td class="no">&mdash;</td><td class="yes">&#10003;</td></tr>
+            <tr><td>Install</td><td>One tap, no store</td><td>Chrome Web Store</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="hint center">Use both: the website for quick translations on any device, the extension when you live inside Facebook.</p>
+    </div>
+  </section>
+
+  <!-- ================= FAQ ================= -->
+  <section id="faq" class="section">
+    <div class="wrap wrap-narrow">
+      <p class="sec-kicker">FAQ</p>
+      <h2 class="sec-title">Good questions, straight answers</h2>
+      <div class="faq-list">
+        <details class="faq-item reveal" open>
+          <summary>Is it really free?</summary>
+          <p>Yes &mdash; free forever, no sign-up, no ads. Translation runs through the free MyMemory API, and your saved listings live in your own browser, not on a server.</p>
+        </details>
+        <details class="faq-item reveal">
+          <summary>Do I have to install anything?</summary>
+          <p>No. It's a normal website that works in any browser. If you use it often you can tap <strong>Install app</strong> (or &ldquo;Add to Home Screen&rdquo; on iPhone) and it opens like a native app.</p>
+        </details>
+        <details class="faq-item reveal">
+          <summary>How accurate is the translation?</summary>
+          <p>It's machine translation, so read the English with a grain of salt. The important part: rent, deposit and phone numbers are extracted from the original Thai digits, so those numbers are always exact.</p>
+        </details>
+        <details class="faq-item reveal">
+          <summary>Can it read screenshots of a post?</summary>
+          <p>Not yet &mdash; OCR isn't wired into this build. Copy the post's text instead (it takes a second), and attach the screenshot to the photo tray so you keep it with the listing.</p>
+        </details>
+        <details class="faq-item reveal">
+          <summary>What about FR-5, translate-selected-text?</summary>
+          <p>Translating text you highlight on other webpages needs browser privileges a plain website can't have, so that feature lives in the Chrome extension only.</p>
+        </details>
+        <details class="faq-item reveal">
+          <summary>Where are my saved listings stored?</summary>
+          <p>In your browser's local storage on this device. Nothing is uploaded. Export to CSV if you want a backup or want to share your shortlist with a friend.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ================= Footer ================= -->
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div class="footer-brand">
+      <div class="brand">
+        <span class="brand-mark">&#3610;</span>
+        <span class="brand-text">
+          <span class="brand-name">BaanRight</span>
+          <span class="brand-sub">Thai housing posts &rarr; English, in one click</span>
+        </span>
+      </div>
+      <p class="hint">Works on any device with a browser &mdash; no install required. FR-5 (translate selected text on other webpages) is only available in the Chrome extension version, since browsers don't allow that from a plain website.</p>
+    </div>
+    <nav class="footer-links" aria-label="Footer">
+      <a href="#how">How it works</a>
+      <a href="#app">Translator</a>
+      <a href="#features">Features</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <div class="footer-note">
+      <p class="hint">Made by <strong>16RideRight</strong> for the MFU community. Listing photos &amp; text belong to their posters.</p>
+    </div>
+  </div>
+  <div class="wrap footer-base">
+    <span>&copy; <span id="year">2026</span> BaanRight</span>
+    <span>Translation by MyMemory &middot; Map data &copy; OpenStreetMap</span>
+  </div>
+</footer>
+
+<div id="toastWrap" class="toast-wrap" aria-live="polite"></div>
+
+<noscript><div class="noscript">BaanRight needs JavaScript to translate &mdash; please enable it and reload.</div></noscript>
+
+<script src="script.js"></script>
+</body>
+</html>

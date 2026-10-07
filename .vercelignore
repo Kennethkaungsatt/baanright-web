@@ -1,0 +1,3 @@
+# Excluded from Vercel deploys (kept locally only)
+backup-old-site/
+.vercelignore
